@@ -1,32 +1,4 @@
 Crash Event,crash link,내용,사용자 수,이벤트 수,90일간 사용자 수,90일간 이벤트 수,진행상태,수정 현황,수정 버전,Jira 이슈 필드,최초 보고 일자
-BaseActivityExtensionKt.showDialogFragment,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/20436682d6d99682f756c33ab0863d8c,비활성화된 화면에서 팝업 노출시도로 State오류 발생,264,286,7500,9200,반영 후 모니터링 중,,,BD-548,2024-08-07
-android.app.ActivityThread.throwRemoteServiceException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/9421d1fbdf562a695d8ce224737b99eb?time=last-twenty-four-hours&types=crash,"- resourceId 관련
-- service notification 실행시 잘못된 icon resource 참조 에러",12,13,1020,1268,원인 파악 중,,,BD-506,2024-05-30
-ProgressBar.onRestoreInstanceState,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/3e39b7c2c40db4cb9a07d98459b26c2e,화면복귀시 ProgressBar  상태 문제,7,7,32,32,발생 추이 모니터링,,,,2024-08-28
-android.app.ActivityThread.throwRemoteServiceException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/e3048ef8b11e0bd78c1f94e88f73d1ac,"- resourceId 관련
-- startForeground함수를 실행하기 위한 notification 실행 실패
-- OS13 이상",5,5,286,299,원인 파악 중,,,BD-411,2024-05-30
-NetworkService.run,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/9418ae7cc1cca4d4a1b39c0dc8daf361?time=last-twenty-four-hours&types=crash,adpie 라이브러리내에서 발생하는 OOM,3,3,33,34,발생 추이 모니터링,,,,2024-06-12
-android.app.ActivityThread$H.handleMessage,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/0055b5565d49825afb5c19d78ab58fd4,"- resourceId 관련
-- notification이 정상 실행되지 않아 startForeground() 함수가 실행되지 못함",2,2,253,545,반영 후 모니터링 중,,2.4.6,BD-307,2024-05-30
-android.app.ActivityThread.throwRemoteServiceException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/4263de835bf1523a397818023de4d902,"- resourceId 관련
-- startForeground함수를 실행하기 위한 notification 실행 실패
-- OS12 이하",2,2,145,200,원인 파악 중,,,BD-411,2024-05-30
-ActivityThread.generateForegroundServiceDidNotStartInTimeException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/bf0aa132fee08d894d95a404d1a44d14?time=last-twenty-four-hours&types=crash,"- WalkService 이슈
-- startFoergroundService 함수 내에서 startForeground 함수를 실행하지 못해서 발생",2,2,244,245,발생 추이 모니터링,,,,2024-06-13
-"CancellableContinuationImpl.resumedState
-",https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/40f3c09f1360ebd2afd4441a6ad482d3?hl=ko&time=last-twenty-four-hours&types=crash,"OOM 발생 (갤러리 화면, Coroutine내부)",2,2,20,20,발생 추이 모니터링,,,,2024-07-08
-Parcel.createException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/0ae0edf6cefe5e2d274e4a6c77a7dd51?time=last-twenty-four-hours&types=crash,"- webDetailActivity에서 발생
-- 자세한 원인 파악 필요",1,1,2,2,원인 파악 중,,,,2024-05-30
-android.app.ActivityThread.handleCreateService,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/30805a6146c0b33feed724acdf88553d?time=last-twenty-four-hours&types=crash,System 종료시점에 서비스 생성 관련 로직 시도하여 발생,1,1,41,99,발생 추이 모니터링,,,,2024-05-30
-ActivityThread.installContentProviders,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/2d93fbdb8935a9afba291afe58a0e612?time=last-twenty-four-hours&types=crash,설치시 시스템이 종료되어 발생,1,1,12,15,발생 추이 모니터링,,,,2024-06-05
-org.chromium.base.JniAndroid.handleException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/66353fa7d6d0ea80cbdc81c20a0ef367,크롬 WebView Native Exception에 의한 크래시,1,1,124,132,해야할일,,,BD-379,2024-05-30
-ActivityThread.handleLaunchActivity,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/9597c1aa07d11f60f435f2b537fd2c55?time=last-twenty-four-hours&types=crash,Activity종료시 WindowManager에 붙어있지 않아 제거할 수 없음,1,1,5,5,발생 추이 모니터링,,,,2024-06-07
-android.app.ActivityThread.handleStopService,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/23ef0b2efb89a5e8e63dd43d82aee5f6?hl=ko&time=last-twenty-four-hours&types=crash,DeadSystemException - Service Stop 시도 시,1,1,14,24,발생 추이 모니터링,,,,2024-07-01
-ActivityClient.activityStopped,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/7be898be9b6f6bbe3d90f85674200043?time=last-twenty-four-hours&types=crash,activity 종료 이후 stop이 호출,1,1,5,5,발생 추이 모니터링,,,,2024-08-02
-StepManagerImpl$init$1.invokeSuspend,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/1f217b37d585f0aa909dd8a220b65fcb,OOM 발생(걸음 수 계산),1,1,5,5,발생 추이 모니터링,,,,2024-08-05
-ExitAppDialog.showNaverAd,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/bd48f96c3e5a74b6bba6e3ac855be5ef,addView시 기존View가 남아있어서 발생하는 문제,1,1,8,8,발생 추이 모니터링,,,,2024-08-30
-ConfigRealtimeHttpClient.setRequestParams,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/767af038bd26c51291c634bb86fcd64b,Firebase RemoteConfig 내부에서 인증관련 method 참조 실패 오류,1,1,1,1,발생 추이 모니터링,,,,2024-09-02
 org.chromium.content.browser.selection.SelectionPopupControllerImpl.C,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/f1132be7f7f0cf90286bd59fbecfa6b4?time=last-twenty-four-hours&types=crash,웹뷰에서만 사용되는 특정 팝업이 화면 종료시 정상 종료되지 않아 발생,0,0,41,43,반영 후 모니터링 중,,2.4.6,BD-304,2024-02-15
 android.app.ActivityThread.throwRemoteServiceException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/1111f679a8e037bbe213e54d1f126d90,"- resourceId 관련
 - startForeground함수를 실행하기 위한 notification 실행 실패",0,0,2,2,원인 파악 중,,,,2024-08-07
@@ -124,3 +96,31 @@ BaseActivity.onCreate,https://console.firebase.google.com/project/ballosodeuk/cr
 WV.z7.e,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/15a835215996d5bc0741a445810d23b2,Chrome Native Crash현상,0,0,1,1,발생 추이 모니터링,,,,2024-08-30
 LayoutOHomeNormalMobonBindingImpl.executeBindings,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/7958684275d9d0cc6c69e1f22ab32b92,Resource를 찾지 못하는 문제,0,0,1,1,발생 추이 모니터링,,,,2024-08-30
 LayerParser.parse,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/99ef58f2240d183de5c9ac68ff12866f,Lottie애니메이션 실행시 OOM,0,0,1,1,발생 추이 모니터링,,,,2024-08-30
+Parcel.createException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/0ae0edf6cefe5e2d274e4a6c77a7dd51?time=last-twenty-four-hours&types=crash,"- webDetailActivity에서 발생
+- 자세한 원인 파악 필요",1,1,2,2,원인 파악 중,,,,2024-05-30
+android.app.ActivityThread.handleCreateService,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/30805a6146c0b33feed724acdf88553d?time=last-twenty-four-hours&types=crash,System 종료시점에 서비스 생성 관련 로직 시도하여 발생,1,1,41,99,발생 추이 모니터링,,,,2024-05-30
+ActivityThread.installContentProviders,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/2d93fbdb8935a9afba291afe58a0e612?time=last-twenty-four-hours&types=crash,설치시 시스템이 종료되어 발생,1,1,12,15,발생 추이 모니터링,,,,2024-06-05
+org.chromium.base.JniAndroid.handleException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/66353fa7d6d0ea80cbdc81c20a0ef367,크롬 WebView Native Exception에 의한 크래시,1,1,124,132,해야할일,,,BD-379,2024-05-30
+ActivityThread.handleLaunchActivity,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/9597c1aa07d11f60f435f2b537fd2c55?time=last-twenty-four-hours&types=crash,Activity종료시 WindowManager에 붙어있지 않아 제거할 수 없음,1,1,5,5,발생 추이 모니터링,,,,2024-06-07
+android.app.ActivityThread.handleStopService,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/23ef0b2efb89a5e8e63dd43d82aee5f6?hl=ko&time=last-twenty-four-hours&types=crash,DeadSystemException - Service Stop 시도 시,1,1,14,24,발생 추이 모니터링,,,,2024-07-01
+ActivityClient.activityStopped,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/7be898be9b6f6bbe3d90f85674200043?time=last-twenty-four-hours&types=crash,activity 종료 이후 stop이 호출,1,1,5,5,발생 추이 모니터링,,,,2024-08-02
+StepManagerImpl$init$1.invokeSuspend,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/1f217b37d585f0aa909dd8a220b65fcb,OOM 발생(걸음 수 계산),1,1,5,5,발생 추이 모니터링,,,,2024-08-05
+ExitAppDialog.showNaverAd,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/bd48f96c3e5a74b6bba6e3ac855be5ef,addView시 기존View가 남아있어서 발생하는 문제,1,1,8,8,발생 추이 모니터링,,,,2024-08-30
+ConfigRealtimeHttpClient.setRequestParams,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/767af038bd26c51291c634bb86fcd64b,Firebase RemoteConfig 내부에서 인증관련 method 참조 실패 오류,1,1,1,1,발생 추이 모니터링,,,,2024-09-02
+android.app.ActivityThread$H.handleMessage,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/0055b5565d49825afb5c19d78ab58fd4,"- resourceId 관련
+- notification이 정상 실행되지 않아 startForeground() 함수가 실행되지 못함",2,2,253,545,반영 후 모니터링 중,,2.4.6,BD-307,2024-05-30
+android.app.ActivityThread.throwRemoteServiceException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/4263de835bf1523a397818023de4d902,"- resourceId 관련
+- startForeground함수를 실행하기 위한 notification 실행 실패
+- OS12 이하",2,2,145,200,원인 파악 중,,,BD-411,2024-05-30
+ActivityThread.generateForegroundServiceDidNotStartInTimeException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/bf0aa132fee08d894d95a404d1a44d14?time=last-twenty-four-hours&types=crash,"- WalkService 이슈
+- startFoergroundService 함수 내에서 startForeground 함수를 실행하지 못해서 발생",2,2,244,245,발생 추이 모니터링,,,,2024-06-13
+"CancellableContinuationImpl.resumedState
+",https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/40f3c09f1360ebd2afd4441a6ad482d3?hl=ko&time=last-twenty-four-hours&types=crash,"OOM 발생 (갤러리 화면, Coroutine내부)",2,2,20,20,발생 추이 모니터링,,,,2024-07-08
+NetworkService.run,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/9418ae7cc1cca4d4a1b39c0dc8daf361?time=last-twenty-four-hours&types=crash,adpie 라이브러리내에서 발생하는 OOM,3,3,33,34,발생 추이 모니터링,,,,2024-06-12
+android.app.ActivityThread.throwRemoteServiceException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/e3048ef8b11e0bd78c1f94e88f73d1ac,"- resourceId 관련
+- startForeground함수를 실행하기 위한 notification 실행 실패
+- OS13 이상",5,5,286,299,원인 파악 중,,,BD-411,2024-05-30
+ProgressBar.onRestoreInstanceState,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/3e39b7c2c40db4cb9a07d98459b26c2e,화면복귀시 ProgressBar  상태 문제,7,7,32,32,발생 추이 모니터링,,,,2024-08-28
+android.app.ActivityThread.throwRemoteServiceException,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/9421d1fbdf562a695d8ce224737b99eb?time=last-twenty-four-hours&types=crash,"- resourceId 관련
+- service notification 실행시 잘못된 icon resource 참조 에러",12,13,1020,1268,원인 파악 중,,,BD-506,2024-05-30
+BaseActivityExtensionKt.showDialogFragment,https://console.firebase.google.com/project/ballosodeuk/crashlytics/app/android:io.balso/issues/20436682d6d99682f756c33ab0863d8c,비활성화된 화면에서 팝업 노출시도로 State오류 발생,264,286,7500,9200,반영 후 모니터링 중,,,BD-548,2024-08-07

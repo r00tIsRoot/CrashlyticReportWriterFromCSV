@@ -1,0 +1,125 @@
+Crash Event,내용,사용자 수,이벤트 수,90일간 사용자 수,90일간 이벤트 수,수정 현황,Jira 이슈 필드
+BaseActivityExtensionKt.showDialogFragment,비활성화된 화면에서 팝업 노출시도로 State오류 발생,264,286,7500,9200,,BD-548
+android.app.ActivityThread.throwRemoteServiceException,"- resourceId 관련
+- service notification 실행시 잘못된 icon resource 참조 에러",12,13,1020,1268,,BD-506
+ProgressBar.onRestoreInstanceState,화면복귀시 ProgressBar  상태 문제,7,7,32,32,,
+android.app.ActivityThread.throwRemoteServiceException,"- resourceId 관련
+- startForeground함수를 실행하기 위한 notification 실행 실패
+- OS13 이상",5,5,286,299,,BD-411
+NetworkService.run,adpie 라이브러리내에서 발생하는 OOM,3,3,33,34,,
+android.app.ActivityThread$H.handleMessage,"- resourceId 관련
+- notification이 정상 실행되지 않아 startForeground() 함수가 실행되지 못함",2,2,253,545,,BD-307
+android.app.ActivityThread.throwRemoteServiceException,"- resourceId 관련
+- startForeground함수를 실행하기 위한 notification 실행 실패
+- OS12 이하",2,2,145,200,,BD-411
+ActivityThread.generateForegroundServiceDidNotStartInTimeException,"- WalkService 이슈
+- startFoergroundService 함수 내에서 startForeground 함수를 실행하지 못해서 발생",2,2,244,245,,
+"CancellableContinuationImpl.resumedState
+","OOM 발생 (갤러리 화면, Coroutine내부)",2,2,20,20,,
+Parcel.createException,"- webDetailActivity에서 발생
+- 자세한 원인 파악 필요",1,1,2,2,,
+android.app.ActivityThread.handleCreateService,System 종료시점에 서비스 생성 관련 로직 시도하여 발생,1,1,41,99,,
+ActivityThread.installContentProviders,설치시 시스템이 종료되어 발생,1,1,12,15,,
+org.chromium.base.JniAndroid.handleException,크롬 WebView Native Exception에 의한 크래시,1,1,124,132,,BD-379
+ActivityThread.handleLaunchActivity,Activity종료시 WindowManager에 붙어있지 않아 제거할 수 없음,1,1,5,5,,
+android.app.ActivityThread.handleStopService,DeadSystemException - Service Stop 시도 시,1,1,14,24,,
+ActivityClient.activityStopped,activity 종료 이후 stop이 호출,1,1,5,5,,
+StepManagerImpl$init$1.invokeSuspend,OOM 발생(걸음 수 계산),1,1,5,5,,
+ExitAppDialog.showNaverAd,addView시 기존View가 남아있어서 발생하는 문제,1,1,8,8,,
+org.chromium.content.browser.selection.SelectionPopupControllerImpl.C,웹뷰에서만 사용되는 특정 팝업이 화면 종료시 정상 종료되지 않아 발생,0,0,41,43,,BD-304
+android.app.ActivityThread.throwRemoteServiceException,"- resourceId 관련
+- startForeground함수를 실행하기 위한 notification 실행 실패",0,0,2,2,,
+WalkService$updateNotification$1.invokeSuspend,System 종료시점에 crashlytics 로깅을 시도하여 발생,0,0,35,63,,
+BinderProxy.transactNative,intent 전달시 누수 발생,0,0,4,5,,BD-405
+org.chromium.ui.base.DeviceFormFactor.isTablet,DeviceFormFactor.isTablet 내부에서 Resource 확인되지 않아 발생,0,0,17,19,,BD-417
+a.getStringNullable,"- 쇼핑탭으로 이동 시 OOM 발생
+- 자세한 사항 추가 분석 필요",0,0,0,0,,
+org.chromium.ui.base.ViewAndroidDelegate.startDragAndDrop,webView에서 드래그 시작 및 종료시 좌표관련 음수로 인해 발생,0,0,0,0,,
+ViewRootImpl.setView,2.4.4 반영 후 재발생,0,0,17,22,,BD-306
+android.app.ActivityThread.handleUnbindService,System 종료시점에 service unbind를 시도하여 발생,0,0,24,28,,
+WalkService$Companion.startService,ForegroundService가 일정시간 안에 되지 않아 발생하는 크래시,0,0,0,0,,BD-416
+BaseActivity.onResume,"OS 8, 9에서만 발생",0,0,4,5,,BD-419
+WebRequest.makeRequest,Unity3D광고 처리중 발생,0,0,5,5,,
+SQLiteConnection.nativeExecuteForCursorWindow,Sqlite db에 내용을 추가할 디스크 공간이 없는 경우 발생,0,0,1,1,,
+Daemons$FinalizerWatchdogDaemon.refQueueTimeoutException,galaxy s23FE 모델에서만 발생,0,0,11,11,,
+BaseActivity.onPause,"2.4.4에 적용 배포  됐으나,  ‘2024. 5. 8’ 2.4.5에 1회 재현됨 발생 확인 되므로 다시 진행중으로 변경",0,0,3,3,,BD-306
+Parcel.readException,AOS8의 저사양 단말(Galaxy A5(2017))에서 발생,0,0,1,1,,
+zq1.g,시스템이 죽은 상태에서 걸음수 sync를 시도해서 발생,0,0,1,1,,
+ViewRootImpl.obtainQueuedInputEvent,저사양 단말 대비 과도한 메모리 사용으로 OOM,0,0,1,1,,
+org.chromium.content.browser.GestureListenerManagerImpl.f,SelectionPopupControllerImpl.C 함수가 정상 동작하지 않아 발생,0,0,7,7,,
+com.pincrux.offerwall.ui.base.a.b,pincrux offerwall 라이브러리 관련 NullPointerException,0,0,2,2,,
+Parcel.createExceptionOrNull,remoteException과 연관되어 발생,0,0,5,5,,
+MdfUtils.getName,삼성 보안관련 라이브러리에서 OOM 발생으로 추정,0,0,1,1,,
+com.igaworks.ssp.common.n.a$b.run,IGAWorks 관련 함수에서 OOM 발생,0,0,3,3,,
+LayoutChallengeListBindingImpl.executeBindings,챌린지탭 - 챌린지리스트에서 OOM 발생,0,0,1,1,,
+com.igaworks.ssp.common.n.a.b,adpopcorn(IGAWorks) 라이브러리 내에서 OOM 발생,0,0,9,9,,
+AppInitializer.doInitialize,시스템의 앱 실행 이벤트 공급시 발생,0,0,2,2,,
+ServiceConnection.lambda$new$0,healthConnect binder 관련 크래시,0,0,1,1,,
+Preconditions.outOfBounds,매일 버튼 누르기 혜택내에서 OOB 발생,0,0,1,1,,
+org.chromium.content.browser.GestureListenerManagerImpl.g,benefitID 9 혜택에서 제스쳐관련 크래시,0,0,1,1,,
+LimitedDispatcher.dispatch,coroutine dispatcher의 최대 개수를 초과하여 발생,0,0,1,1,,
+RecordingCanvas.throwIfCannotDraw,뷰에 너무 큰 bitmap을 그리려고 시도시 발생,0,0,3,4,,
+AlbumActivity.getPictureList,사진목록 로드중 경로를 찾을 수 없는 경우 발생,0,0,3,3,,
+Pools$SimplePool.<init>,OOM 발생 (챌린지 Fragment 내에서 ConstraintLayout 그리는 중),0,0,1,1,,
+android.app.ActivityThread.handleServiceArgs,DeadSystemException - FCM Service 생성 시도 시,0,0,7,8,,
+ViewRootImpl.checkThread,"Thread에서 UI 접근 ",0,0,69,106,"2.4.9 적용 후 모니터링 중, 8/20 2.5.0 1건 발생",BD-491
+Parcel.readBundle,OOM 발생(홈 화면접근 시),0,0,1,1,,
+android.app.ActivityThread.handleSleeping,DeadSystemException,0,0,5,7,,
+ImageAssetManager.bitmapForId,OOM 발생(홈 화면 Bitmap 접근 시),0,0,2,2,,
+SolverVariable.<init>,OOM 발생(챌린지 탭 ConstraintLayout 관련),0,0,8,9,,
+WV.N4.c,OOM 발생(WebView접근시),0,0,4,4,,
+ServiceConnection.connect,ServiceConnet 실패(HealthConnect 권한 관련),0,0,4,54,,
+DisplayEventReceiver.dispatchVsync,OOM 발생(DisplayEventReceiver ),0,0,2,2,,
+ViewGroup.offsetRectBetweenParentAndChild,"MotionLayout 그릴 때 offset 측정 오류 ",0,0,1,1,,
+g.a,OOM 발생 (com.kakao.adfit 내부),0,0,3,3,,
+org.chromium.android_webview.AwContents.v,OOM 발생 (WebView),0,0,2,2,,
+WV.eq.a,OOM 발생 (WebView),0,0,2,2,,
+WV.I7.b,OOM 발생 (WebView),0,0,7,7,,
+HomeNormalChallengeAdapter.createRecruitingAdnetworkViewHolder,OOM 발생 (Home List AdnetworkViewHolder Inflate시),0,0,1,1,,
+io.balso.ui.base.BaseBindingActivity$dataBinding$2.invoke,databinding시  Resource 참조 문제,0,0,13,17,,
+RecruitingChallengeAdapter.createRecruitingChallengeViewHolder,OOM 발생 (챌린지 탭 - RecruitingChallengeAdapter),0,0,3,3,,
+Object.internalClone,OOM 발생 (layout xml 구성 관련),0,0,1,1,,
+BaseSharedPreference.get,OOM 발생 (SharedPreference get),0,0,1,1,,
+com.igaworks.ssp.common.m.a.f,OOM 발생 (Home - AdPopcorn 광고),0,0,2,2,,
+DirectExecutor.execute,헬스 커넥트 연결 실패 시,0,0,1,1,,
+ExitAppDialog.initOfferwallLayout,OOM 발생(앱 종료 팝업 생성 시),0,0,1,1,,
+InsecureNonceAesGcmJce.decrypt,OOM 발생(SharedPreference),0,0,1,1,,
+com.igaworks.ssp.part.hybrid.AdPopcornSSPJsBridge$d.OnCustomAdReceiveSuccess,OOM 발생(애드팝콘 SSP 광고),0,0,1,1,,
+ArrayLinkedVariables.<init>,OOM 발생(홈 MotionLayout),0,0,2,2,,
+com.igaworks.ssp.common.o.a$d.run,OOM 발생(애드팝콘 SSP 광고),0,0,4,4,,
+StepManagerImpl.processWalkData,OOM 발생(걸음 수 계산),0,0,1,1,,
+RealConnectionPool.cleanup,정규식 Class관련 IncompatibleClassChangeError,0,0,1,1,,
+com.fsn.cauly.blackdragoncore.contents.f.a,"openIntent 시  Activity없음 ",0,0,3,8,,
+PincruxOfferwallActivity.onResume,PincruxOfferwall화면 Activity Lifecycle 문제,0,0,1,1,,
+ConstraintWidget.<init>,OOM 발생(홈 MotionLayout),0,0,3,3,,
+SemDesktopModeManager.getDesktopModeState,DeadSystemException,0,0,1,1,,
+f.a,OOM 발생(kakao.adfit),0,0,1,1,,
+java.lang.OutOfMemoryError,OOM 발생(Exception Throw 중),0,0,4,5,,
+ThreadedRenderer.nDeleteProxy,View Rendering 중 Timeout,0,0,1,1,,
+SplineSet$Sort.doubleQuickSort,OOM 발생(ConstraintLayout),0,0,2,2,,
+ConstraintAnchor.resetSolverVariable,OOM 발생(ConstraintLayout),0,0,2,2,,
+org.chromium.content.browser.GestureListenerManagerImpl.onEventAck,destroy된 window에 이벤트 전달,0,0,2,2,,
+MotionController.<init>,OOM 발생(MotionLayout),0,0,1,1,,
+SQLiteSession.throwIfNoTransaction,DB Transaction 관련 에러,0,0,4,4,,
+DisplayManagerGlobal.getDisplayIds,화면이 종료된 이후 display의 id목록을 요청,0,0,1,1,,
+MaterialTextView.<init>,adPie adView의 MaterialTextView에서 OOM,0,0,1,1,,
+org.chromium.android_webview.AwContents.n,webView가 제거되기 전에 destroy가 호출,0,0,1,1,,
+BaseSharedPreference.set,coinPopup 관련 sharedPreference 값 설정 중 OOM,0,0,1,1,,
+aosc.d java.lang.ClassNotFoundException - erew,안드로이드 gms라이브러리 내의 특정 class를 참조하지 못하는 현상,0,0,1,1694,,BD-516
+ServiceConnection.onBindingDied,ServiceConnet 실패(HealthConnect 권한 관련),0,0,2,2,,
+FloatingLayout.updateCoinText,Floating버튼 관련 현상,0,0,1,1,,
+TextView.getTextDirectionHeuristic,TextView관련 현상,0,0,1,1,,
+ActivityResultContracts$RequestMultiplePermissions.parseResult,Kotlin Collection Array관련 현상,0,0,1,1,,
+BaseWebChromeClient.onCreateWindow,Chrome Native Crash현상,0,0,1,1,,
+BaseBindingActivity$dataBinding$2.invoke,databinding시 설치된 WebView를 찾지 못하는 문제,0,0,6,35,,
+BaseBindingFragment.onCreateView,Fragment생성시 설치된 WebView가 없는 문제,0,0,3,5,,
+org.chromium.android_webview.AwDataDirLock.b,Chrome WebView사 관련 현상,0,0,1,1,,
+SQLiteConnection.nativeExecute,Android SQLiteDatabase 오류 문제,0,0,2,4,,
+DiskLruCache$Entry.<init>,OOM 발생,0,0,1,1,,
+CarouselViewPageAdapter.getCarouselItem,CarouselView에서 IndexOutOfBoundsException 발생 현상,0,0,3,3,,
+Linux.open,Device에 공간이 없어서 File Open안되는 현상,0,0,1,1,,
+ActivityThread.throwRemoteServiceException,RemoteService Event처리 관련 현상,0,0,2,2,,
+BaseActivity.onCreate,Fragment 재생성시 발생하는 오류,0,0,6,6,,
+WV.z7.e,Chrome Native Crash현상,0,0,1,1,,
+LayoutOHomeNormalMobonBindingImpl.executeBindings,Resource를 찾지 못하는 문제,0,0,1,1,,
+LayerParser.parse,Lottie애니메이션 실행시 OOM,0,0,1,1,,

@@ -50,13 +50,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = Pink40
                 ) {
-                    ReadCsvButton(btnName = "Read CSV", onClickBtn = { readCsv() })
+                    ReadCsvButton(btnName = "Read CSV", onClickBtn = {
+                        readCsv()
+                        readCsvToJson()
+                    })
                 }
             }
         }
     }
 
-    private fun readCsv() {
+    private fun readCsvToJson() {
         lifecycleScope.launch(Dispatchers.IO) {
             val cal = Calendar.getInstance()
             val date = String.format(
@@ -76,7 +79,7 @@ class MainActivity : ComponentActivity() {
             try {
                 val issueLinks = mutableListOf<IssueLink>()
 
-                val inputStream = assets.open("AOS Crashlytics DB.csv")
+                val inputStream = assets.open("new/AOS Crashlytics DB.csv")
                 val csvReader = CSVReader(InputStreamReader(inputStream, "UTF-8"))
                 val allContent = csvReader.readAll() as List<Array<String>>
                 allContent.forEachIndexed lit@{ rowIndex, row ->
@@ -150,6 +153,93 @@ class MainActivity : ComponentActivity() {
         return matchResult?.groups?.get(1)?.value ?: ""
     }
 
+    private fun readCsv() {
+        lifecycleScope.launch(Dispatchers.IO) {
+//            throw InflateException("Bad notification(tag=null, id=1000)")
+
+            val cal = Calendar.getInstance()
+            val date = String.format(
+                Locale.KOREA,
+                "%04d_%02d_%02d",
+                cal[Calendar.YEAR],
+                cal[Calendar.MONTH] + 1,
+                cal[Calendar.DAY_OF_MONTH]
+            )
+
+
+            val dir = File(filesDir.path + File.separatorChar + "Daily_Monitoring")
+            if (!dir.exists()) {
+                dir.mkdirs()
+            }
+
+            val file = File(dir.path + File.separatorChar + date + ".txt")
+            try {
+                FileOutputStream(file, true).use { fos ->
+                    if (file.parentFile?.exists() != true) {
+                        file.parentFile?.mkdirs()
+                    }
+                    fos.write("신규 보고 건 (24시간 기준):\n".toByteArray())
+                    convertData(fos, "new/AOS Crashlytics DB.csv")
+                    fos.write("\n기존 보고 건 (24시간 기준):\n".toByteArray())
+                    convertData(fos, "old/AOS Crashlytics DB.csv")
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    private fun convertData(fos: FileOutputStream, path: String) {
+        val inputStream = assets.open(path)
+        val csvReader = CSVReader(InputStreamReader(inputStream, "UTF-8"))
+        val allContent = csvReader.readAll() as List<Array<String>>
+        allContent.forEachIndexed lit@{ rowIndex, row ->
+
+            if (rowIndex == 0) {
+                for (value in row) {
+                    val sb = StringBuilder()
+                    sb.append(value)
+                    Log.d("monitor", "[Column] $sb")
+                }
+                return@lit
+            } else {
+
+                val crashTitle = row[0] // Crash Event
+                if (crashTitle.isBlank()) return@lit
+                val content = row[1] // 내용
+                val userCount24 = row[2] // 24시간 사용자 수
+                val userEvent24 = row[3] // 24시간 이벤트 수
+                val userCount90 = row[4] //90일간 사용자 수
+                val userEvent90 = row[5] // 90일간 이벤트 수
+                val versionToResolve = row[6] // 수정 예정 버전
+                val jira = row[7] // Jira
+                // 이슈 필드
+
+                val sb = StringBuilder()
+                sb.appendLine(
+                    "$rowIndex.$crashTitle" + if (versionToResolve.isNotBlank()) {
+                        " (v$versionToResolve)"
+                    } else {
+                        ""
+                    }
+                )
+
+                if (jira.isNotBlank()) {
+                    sb.appendLine("https://balso.atlassian.net/browse/$jira")
+                } else {
+                    if (content.contains('\n')) sb.appendLine("현상:\n$content")
+                    else sb.appendLine("현상 : $content")
+                }
+                sb.append("사용자 : $userCount24, ")
+                sb.appendLine("이벤트 : $userEvent24")
+                sb.append("90일 기준 사용자 : $userCount90, ")
+                sb.appendLine("이벤트 : $userEvent90")
+                Log.d("monitor", "[$rowIndex] $sb")
+                fos.write(sb.toString().toByteArray())
+                fos.write("\r\n".toByteArray())
+            }
+        }
+    }
 }
 
 @Composable
