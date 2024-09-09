@@ -1,0 +1,2 @@
+Crash Event,내용,사용자 수,이벤트 수,90일간 사용자 수,90일간 이벤트 수,수정 현황,Jira 이슈 필드
+ConfigRealtimeHttpClient.setRequestParams,Firebase RemoteConfig 내부에서 인증관련 method 참조 실패 오류,1,1,1,1,,
